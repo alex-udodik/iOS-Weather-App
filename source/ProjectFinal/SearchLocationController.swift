@@ -81,7 +81,7 @@ class SearchLocationController: UIViewController, UITextFieldDelegate, CLLocatio
     }
     
     func getLocation(location: String) {
-        let urlString = "https://api.openweathermap.org/data/2.5/weather?q=" + location + "&appid=87a2f4bbfb5d44364ab455c8a3aa1300"
+        let urlString = "https://api.openweathermap.org/data/2.5/weather?q=" + location + "&appid=<api key>"
         
         let url = URL(string: urlString)
         let dataTask = URLSession.shared.dataTask(with: url!, completionHandler: handleResponse)
@@ -89,7 +89,7 @@ class SearchLocationController: UIViewController, UITextFieldDelegate, CLLocatio
     }
     
     func getLocationCoordinate(lat: String, lon: String) {
-        let urlString = "https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&" + "lon=" + lon + "&appid=87a2f4bbfb5d44364ab455c8a3aa1300"
+        let urlString = "https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&" + "lon=" + lon + "&appid=<api key>"
         
         let url = URL(string: urlString)
         let dataTask = URLSession.shared.dataTask(with: url!, completionHandler: handleResponse)
