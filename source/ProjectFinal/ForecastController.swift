@@ -391,7 +391,7 @@ class ForecastController: UIViewController, UICollectionViewDataSource, UICollec
     func getLocation() {
         
         if let location = cityID {
-            let urlString = "https://api.openweathermap.org/data/2.5/weather?id=" + String(location) + "&appid=87a2f4bbfb5d44364ab455c8a3aa1300"
+            let urlString = "https://api.openweathermap.org/data/2.5/weather?id=" + String(location) + "&appid=<api key>"
             
             let url = URL(string: urlString)
             let dataTask = URLSession.shared.dataTask(with: url!, completionHandler: handleResponse)
@@ -502,7 +502,7 @@ class ForecastController: UIViewController, UICollectionViewDataSource, UICollec
     }
     func get5DayForecast() {
         if let location = cityID {
-            let urlString = "https://api.openweathermap.org/data/2.5/forecast?id=" + String(location) + "&appid=87a2f4bbfb5d44364ab455c8a3aa1300"
+            let urlString = "https://api.openweathermap.org/data/2.5/forecast?id=" + String(location) + "&appid=<api key>"
             
             let url = URL(string: urlString)
             let dataTask = URLSession.shared.dataTask(with: url!, completionHandler: handleForecastResponse(data:response:error:))
